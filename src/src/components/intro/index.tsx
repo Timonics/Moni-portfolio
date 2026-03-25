@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import profileBackgroundImg from "../../../assets/profile/moni-profile2.jpg";
 import Nav from "../nav";
 import { Link } from "react-router";
-import { ArrowRight, ChevronDown, Sparkles } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 
 const IntroPage: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -15,12 +15,12 @@ const IntroPage: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToNext = () => {
-    window.scrollTo({
-      top: window.innerHeight,
-      behavior: "smooth",
-    });
-  };
+  // const scrollToNext = () => {
+  //   window.scrollTo({
+  //     top: window.innerHeight,
+  //     behavior: "smooth",
+  //   });
+  // };
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -138,17 +138,6 @@ const IntroPage: React.FC = () => {
             ))}
           </div>
         </div>
-
-        {/* Scroll indicator - Hidden on mobile if preferred */}
-        <button
-          onClick={scrollToNext}
-          className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce group focus:outline-none max-sm:hidden"
-          aria-label="Scroll down"
-        >
-          <div className="w-8 h-8 md:w-10 md:h-10 rounded-full border-2 border-white/30 flex items-center justify-center hover:border-white/60 transition-colors">
-            <ChevronDown className="w-4 h-4 md:w-5 md:h-5 text-white/70 group-hover:text-white/90 transition-colors" />
-          </div>
-        </button>
       </div>
     </div>
   );
