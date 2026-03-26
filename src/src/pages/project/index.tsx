@@ -60,7 +60,7 @@ const ProjectsPage: React.FC = () => {
     },
     {
       id: 2,
-      title: "Support Performance Dashboard",
+      title: "Shipments Performance Dashboard",
       description:
         "Logistics performance dashboard to track shipment route, revenue categories and delivery status. The analysis highlights on-time deliveries rates, shipment delay and regional performance to optimize operational efficiency.",
       image: supportDashboardImg,
